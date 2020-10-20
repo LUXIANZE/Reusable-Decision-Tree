@@ -1,0 +1,21 @@
+{
+  "name": "decision-Tree-Service",
+  "version": "1.0.0",
+  "description": "To reduce the round trip for querying, the object will use lazy contruction and reused untill it is informed to be updated (trigger from endpoint).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LUXIANZE/Reusable-Decision-Tree.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LUXIANZE/Reusable-Decision-Tree/issues"
+  },
+  "homepage": "https://github.com/LUXIANZE/Reusable-Decision-Tree#readme",
+  "type": "module"
+}
