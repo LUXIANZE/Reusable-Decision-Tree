@@ -17,5 +17,8 @@
     "url": "https://github.com/LUXIANZE/Reusable-Decision-Tree/issues"
   },
   "homepage": "https://github.com/LUXIANZE/Reusable-Decision-Tree#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
