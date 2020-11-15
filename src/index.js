@@ -1,5 +1,5 @@
 import {db_tree} from './mock_db.js'
-import {Logger} from './logger.js'
+import {Logger} from './utils/logger.js'
 
 /**
  * - Above are imports
