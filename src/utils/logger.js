@@ -1,4 +1,4 @@
-export function Logger(title, content){
+export default function Logger(title, content){
     if(title){
         console.log("\n");
         console.log(title);
