@@ -2,6 +2,8 @@ import express from 'express'
 import requestPreprocessor from './utils/requestPreprocessor.js';
 import logger from './utils/logger.js';
 import { db_tree } from './mock_db.js';
+import { GENERAL_ERROR } from './constants/error.js'
+import { GENERAL_SUCCESS } from './constants/success.js'
 
 const app = express()
 const port = 3000
@@ -18,17 +20,17 @@ app.post('/decision', async (req, res) => {
     try {
         client_payload = await requestPreprocessor(req.body)
     } catch (error) {
-        logger("Logged", error.message)
-        res.status(500).send(`Error: ${error.message}`)
-        return
+        logger(GENERAL_ERROR, error.message)
+        return res.status(500).send(`Error: ${error.message}`)
     }
 
     try {
         answer = db_tree.evaluate(client_payload.answer)
     } catch (error) {
-        logger("Error", error.message)
+        logger(GENERAL_ERROR, error.message)
+        return res.status(500).send(`Error: ${error.message}`)
     }
-    
+    logger(GENERAL_SUCCESS, `The answer object evaluated ${answer.text}, next node is ${answer.next_node}`)
     return res.send(answer.text)
 })
 
