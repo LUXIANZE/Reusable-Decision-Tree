@@ -20,7 +20,7 @@ app.post('/decision', async (req, res) => {
     try {
         client_payload = await requestPreprocessor(req.body)
     } catch (error) {
-        logger(GENERAL_ERROR, error.message)
+        logger(GENERAL_ERROR, error.message) //TODO@LUXIANZE: #5 Remove the use of personal Logger, choose mature Logger in npm
         return res.status(500).send(`Error: ${error.message}`)
     }
 
