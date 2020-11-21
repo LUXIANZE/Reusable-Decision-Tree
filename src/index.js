@@ -19,14 +19,14 @@ app.post('/decision', async (req, res) => {
         client_payload = await requestPreprocessor(req.body)
     } catch (error) {
         logger("Logged", error.message)
-        res.status(500).send(`Error: ${error.message}`)
-        return
+        return res.status(500).send(`Error: ${error.message}`)
     }
 
     try {
-        answer = db_tree.evaluate(client_payload.answer)
+        answer = db_tree.evaluate(req.body.answer)
     } catch (error) {
         logger("Error", error.message)
+        return res.status(500).send(`Error: ${error.message}`)
     }
     
     return res.send(answer.text)
