@@ -1,0 +1,3 @@
+const GENERAL_SUCCESS = "Success";
+
+export {GENERAL_SUCCESS as GENERAL_SUCCESS};
