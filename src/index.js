@@ -6,7 +6,7 @@ import { GENERAL_ERROR } from './constants/error.js'
 import { GENERAL_SUCCESS } from './constants/success.js'
 
 const app = express()
-const port = 3000
+const port = 5000
 app.use(express.json())
 
 app.get('/', (req, res) => {
