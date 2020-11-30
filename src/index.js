@@ -1,7 +1,7 @@
 import express from 'express'
 import requestPreprocessor from './utils/requestPreprocessor.js';
 import logger from './utils/logger.js';
-import { db_tree } from './mock_db.js';
+import { db_tree } from './mocks/mock_cdss_tree.js';
 import { GENERAL_ERROR } from './constants/error.js'
 import { GENERAL_SUCCESS } from './constants/success.js'
 
@@ -33,6 +33,8 @@ app.post('/decision', async (req, res) => {
     logger(GENERAL_SUCCESS, `The answer object evaluated ${answer.text}, next node is ${answer.next_node}`)
     return res.send(answer.text)
 })
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

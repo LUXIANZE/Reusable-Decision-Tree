@@ -1,5 +1,5 @@
-import Tree from './components/tree.js'
-import Node from './components/node.js'
+import Tree from '../components/tree.js'
+import Node from '../components/node.js'
 
 const treeid = "T001";
 
