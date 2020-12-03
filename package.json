@@ -1,5 +1,5 @@
 {
-  "name": "decision-Tree-Service",
+  "name": "decision-tree-service",
   "version": "1.0.0",
   "description": "To reduce the round trip for querying, the object will use lazy contruction and reused untill it is informed to be updated (trigger from endpoint).",
   "main": "src/index.js",
