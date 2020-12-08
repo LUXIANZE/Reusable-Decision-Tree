@@ -31,13 +31,14 @@ v12.18.3
 npm i
 ```
 
-- When the installation is complete, do:
+- Then, refer to `.env.example` file to change PORT number to the PORT that you desired
+- After that, do:
 
 ```
 npm run dev
 ```
 
-- If you would like to add more Decision Tress and test out different question sets. Do your modification in **mock_db.js**
+- To know more about how to use this API and sample data to work with, visit [this file](docs/endpoints.md)
 
 # Entities
 
